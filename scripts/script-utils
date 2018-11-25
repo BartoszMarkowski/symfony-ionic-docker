@@ -1,0 +1,8 @@
+scriptpath="$(dirname "$(realpath "$0")")"
+projpath="${scriptpath%%/scripts}"
+
+cd "$projpath"
+
+DOCKER_COMPOSE="docker-compose"
+
+[ -z "$*" ] && set -- bash
